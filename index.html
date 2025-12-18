@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배달 라이더스 - 고객 지원</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card h2 {
+            color: #FF5252;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .email-link {
+            display: inline-block;
+            background: #FF5252;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        
+        .email-link:hover {
+            background: #E53935;
+        }
+        
+        .faq-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .faq-section h2 {
+            color: #FF5252;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-item h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .faq-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            padding: 20px;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚚 배달 라이더스</h1>
+            <p>고객 지원 센터</p>
+        </header>
+        
+        <div class="support-grid">
+            <div class="card">
+                <h2>📧 이메일 지원</h2>
+                <p>문제가 생기거나 궁금한 점이 있으시면 아래 이메일로 연락주세요.</p>
+                <p><strong>response@ydsnas.com</strong></p>
+                <a href="mailto:response@ydsnas.com" class="email-link">메일 보내기</a>
+            </div>
+            
+            <div class="card">
+                <h2>⏰ 응답 시간</h2>
+                <p>평일 24시간 이내 답변해드립니다.</p>
+                <p>주말/공휴일은 다음 업무일에 처리됩니다.</p>
+                <p style="margin-top: 20px; color: #FF5252; font-weight: bold;">빠른 처리를 위해 상세한 설명 부탁드립니다.</p>
+            </div>
+            
+            <div class="card">
+                <h2>🐛 버그 신고</h2>
+                <p>앱 사용 중 오류를 발견하셨나요?</p>
+                <p>아래 정보와 함께 버그를 신고해주세요:</p>
+                <ul style="margin-left: 20px; color: #666;">
+                    <li>버그 설명</li>
+                    <li>발생 시간/상황</li>
+                    <li>스크린샷 (필요시)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="faq-section">
+            <h2>❓ 자주 묻는 질문 (FAQ)</h2>
+            
+            <div class="faq-item">
+                <h3>Q1. 앱 설치는 어떻게 하나요?</h3>
+                <p>iOS: App Store에서 "배달 라이더스" 검색 후 다운로드
+                <br>Android: Google Play Store에서 "배달 라이더스" 검색 후 다운로드</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Q2. 내 데이터는 안전한가요?</h3>
+                <p>네, 모든 개인 정보는 암호화되어 저장되며, 언제든지 삭제 요청할 수 있습니다. 자세한 내용은 개인정보 보호정책을 확인해주세요.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Q3. 수익 통계가 정확한가요?</h3>
+                <p>모든 수익은 사용자가 직접 입력하는 데이터 기반입니다. 정확한 기록을 위해 배달 완료 후 즉시 입력을 권장합니다.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Q4. 계정을 삭제하고 싶어요.</h3>
+                <p>설정 → 앱 관리 → 데이터 내러버기에서 전체 데이터 삭제가 가능합니다. 복구는 불가능하니 신중히 결정해주세요.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Q5. 플랫폼 수익이 잘못 계산되었어요.</h3>
+                <p>다시 계산해드릴 수 있습니다. 다음 정보를 포함해 이메일 보내주세요:
+                <br>- 문제가 발생한 날짜
+                <br>- 플랫폼명
+                <br>- 예상 금액과 앱 표시 금액</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Q6. 기능 추가 요청이 있어요.</h3>
+                <p>좋은 의견 감사합니다! response@ydsnas.com으로 기능 제안을 보내주시면, 검토 후 추후 업데이트에 반영하겠습니다.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 배달 라이더스. All rights reserved.</p>
+            <p>문의사항이 있으시면 <a href="mailto:response@ydsnas.com" style="color: white; text-decoration: underline;">이메일</a>로 연락주세요.</p>
+        </footer>
+    </div>
+</body>
+</html>
